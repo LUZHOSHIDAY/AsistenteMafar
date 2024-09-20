@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAFAR TECH Innovation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="chat-container">
+            <!-- Cabecera del chat -->
+            <div class="chat-header">
+                <img src="../static/img/logo.png" alt="Asistente Avatar" class="avatar">
+                <h2 class="mb-0">ASISTENTE MAFAR TECH</h2>
+            </div>
+
+            <!-- Cuerpo del chat -->
+            <div id="chat-box" class="chat-body">
+                <div class="message received">
+                    <p>¡Hola! Soy MAFAR tu asistente virtual, ¿cómo puedo ayudarte?</p>
+                   
+                </div>
+            </div>
+
+            <!-- Pie de chat con entrada de texto -->
+            <div class="chat-footer">
+                <img src="../static/img/logo.png" alt="User Avatar" class="avatar">
+                <input type="text" id="user-input" placeholder="Escribe un mensaje..." class="form-control">
+                <button id="voice-button" class="btn btn-outline-secondary">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <!-- Botón de enviar con icono -->
+                <button id="send-button" class="btn btn-danger">
+                    <i class="fas fa-paper-plane"></i> <!-- Icono de enviar -->
+                </button>
+                <!-- Botón para detener la lectura de voz con iconos dinámicos -->
+                <button id="stop-button" class="btn btn-danger">
+                    <i class="fas fa-stop" id="stop-icon"></i> <!-- Icono por defecto -->
+                </button>
+            </div>
+            
+               
+        </div>
+    </div>
+
+    <!-- Enlace a script.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../static/script.js"></script>
+</body>
+</html>
