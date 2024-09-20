@@ -1,0 +1,220 @@
+/* General */
+body {
+    background: url('../img/world.png') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Elimina el margen predeterminado del body */
+}
+
+/* Incluye Google Fonts para una fuente personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+/* Contenedor del chat */
+.chat-container {
+    width: 90%;
+    max-width: 900px; /* Aumento del ancho máximo */
+    min-width: 600px; /* Aumento del ancho mínimo */
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco semi-transparente */
+    border-radius: 12px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+/* Cabecera del chat */
+.chat-header {
+    background: linear-gradient(135deg, rgba(100, 20, 20, 0.9), rgba(180, 70, 70, 0.9)); /* Gradiente de rojo oscuro */
+    color: #ffffff;
+    border-radius: 12px 12px 0 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid rgba(180, 70, 70, 0.7); /* Línea de separación más sutil */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Título del chat */
+.chat-header h2 {
+    font-family: 'Roboto', sans-serif; /* Fuente personalizada */
+    font-size: 1.6em; /* Tamaño de fuente aumentado */
+    font-weight: 700; /* Peso de fuente */
+    margin: 0; /* Sin márgenes */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25); /* Sombra del texto para mejorar la legibilidad */
+}
+
+/* Estilo de los avatares */
+.avatar {
+    border-radius: 50%;
+    width: 60px; /* Tamaño del avatar aumentado */
+    height: 60px; /* Tamaño del avatar aumentado */
+    object-fit: cover;
+    border: 3px solid #ffffff; /* Borde blanco más grueso */
+}
+
+/* Cuerpo del chat */
+.chat-body {
+    padding: 20px;
+    max-height: 500px; /* Ajusta la altura máxima */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    background: url('/static/img/02.png') no-repeat center center; /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    border-bottom: 1px solid #e0e0e0;
+    flex-grow: 1;
+}
+
+/* Mensajes */
+.message {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 15px; /* Bordes más redondeados */
+    max-width: 80%;
+}
+
+/* Mensaje del usuario */
+.message.user-message {
+    background-color: rgba(200, 50, 50, 0.9); /* Rojo más oscuro y semi-transparente */
+    color: #ffffff;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+}
+
+/* Mensaje del asistente */
+.message.assistant-message {
+    background-color: #ffffff;
+    color: #333;
+    border-top-left-radius: 0;
+    border-left: 5px solid #d4af37; /* Dorado más prominente */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 15px; /* Aumento del padding */
+}
+
+/* Tiempo del mensaje */
+.time {
+    font-size: 0.8em;
+    color: #777;
+    display: block;
+    margin-top: 7px;
+}
+
+/* Footer del chat */
+.chat-footer {
+    padding: 20px;
+    border-top: 1px solid #4b3505;
+    display: flex;
+    align-items: center;
+    background-color: rgba(240, 240, 240, 0.95); /* Fondo gris muy claro semi-transparente */
+}
+
+/* Botones y entrada */
+.chat-footer img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.chat-footer input {
+    flex-grow: 1;
+    border-radius: 25px; /* Borde más redondeado */
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-right: 15px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em; /* Tamaño de fuente ligeramente aumentado */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-footer input:focus {
+    border-color: rgba(200, 50, 50, 0.9); /* Rojo para el borde */
+    box-shadow: 0 0 6px rgba(200, 50, 50, 0.5); /* Sombra cuando está enfocado */
+}
+
+/* Botones */
+.chat-footer button {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botón Enviar */
+#send-button {
+    background-color: rgba(200, 50, 50, 0.9); /* Rojo */
+    color: #ffffff;
+    margin-left: 15px;
+}
+
+#send-button i {
+    font-size: 1.3em;
+}
+
+#send-button:hover {
+    background-color: rgba(220, 60, 60, 0.9); /* Rojo más oscuro */
+    transform: scale(1.05); /* Efecto de escalado */
+}
+
+/* Botón de voz */
+#voice-button {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+#voice-button i {
+    font-size: 1.3em;
+}
+
+#voice-button:hover {
+    background-color: #d0d0d0;
+}
+
+/* Botón Detener */
+#stop-button {
+    background-color: #dc3545; /* Rojo para el botón de detener */
+    color: #ffffff;
+    border-radius: 25px; /* Borde redondeado más grande */
+    padding: 12px 18px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#stop-button i {
+    font-size: 1.3em;
+}
+
+/* Estado cuando está en modo pausa */
+#stop-button.pause i {
+    color: #f0ad4e; /* Color dorado para indicar pausa */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .chat-container {
+        width: 95%; /* Ajustar en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-container {
+        width: 100%; /* Pantallas pequeñas 100% */
+        border-radius: 0;
+    }
+
+    .chat-footer input {
+        margin-right: 5px; /* Ajustar espacio entre input y botón */
+    }
+
+    .chat-footer button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1em;
+    }
+}
